@@ -21,8 +21,8 @@ class Perceptron:
             db = (1 / len(X)) * np.sum(y_pred - y)
 
             # Update weights and bias
-            self.weights -= self.lr * dw
-            self.bias -= self.lr * db
+            self.weights -= self.lr *dw
+            self.bias -= self.lr *db
 
     def predict(self, X):
         return activation_function(np.dot(X, self.weights) + self.bias)
